@@ -1,14 +1,19 @@
 <template>
-  <div class="wrapper">
-    <section></section>
-    <main></main>
-  </div>
+<div class="wrapper">
+  <Profile />
+  <main></main>
+</div>
 </template>
 
 <script>
-  export default {
-    name: 'Home'
+import Profile from './Profile/Main.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    Profile
   }
+}
 </script>
 
 <style lang='scss' scoped>
@@ -27,7 +32,6 @@
 section {
   grid-row: main;
   grid-column: profile;
-  background-color: $main-color;
 }
 
 main {
@@ -46,7 +50,7 @@ main {
 @include media-breakpoint-mobile {
   
   .wrapper {
-    grid-template-rows: 1% [profile] 1fr [main] 2fr 1%;
+    grid-template-rows: 1% [profile] 450px [main] auto 1%;
     grid-template-columns: 1% [main] 1fr 1%;
   }
 
