@@ -1,0 +1,41 @@
+/* Variables */
+$main-color: #4F90CD;
+$gray-color: #edeeef;
+
+/* Mixins */
+
+/* widescreen */
+@mixin media-breakpoint-widescreen {
+
+  @media (max-width: 1407px) {
+    
+    @content;
+  }
+}
+
+/* desktop */
+@mixin media-breakpoint-desktop {
+
+  @media (max-width: 1215px) {
+    
+    @content;
+  }
+}
+
+/* tablet */
+@mixin media-breakpoint-tablet {
+
+  @media (max-width: 1023px) {
+    
+    @content;
+  }
+}
+
+/* mobile */
+@mixin media-breakpoint-mobile {
+
+  @media (max-width: 768px) {
+    
+    @content;
+  }
+}
