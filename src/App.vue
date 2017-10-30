@@ -13,6 +13,7 @@ export default {
 <style>
 
 html, body {
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
