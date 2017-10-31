@@ -1,8 +1,15 @@
 <template>
-  <section>
+  <section id="profile">
     <figure>
       <img src="./assets/profile-pic.jpg" alt="Profile picture">
     </figure>
+
+    <section id="description">
+      <h1 id="name">Gabriel Nuñez</h1>
+      <span id="occupation">Frontend developer</span>
+      <p>I'm always looking to keep up with the latest technological trends, and I'm committed to meet the specified goals and objectives.</p>
+    </section>
+
   </section>
 </template>
 
@@ -16,10 +23,10 @@
 
 @import '../../App.scss';
 
-section {
+#profile {
 
   display: grid;
-  grid-template-rows: [picture] 30% 70%;
+  grid-template-rows: [picture] 30% [description] 70%;
 
   background-color: $main-color;
 
@@ -38,10 +45,32 @@ section {
   }
 }
 
+#description {
+
+  grid-row: description;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+
+  #name {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #occupation {
+    font-size: 18px;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
 @include media-breakpoint-mobile {
 
-  section {
-    grid-template-rows: [picture] 60% 40%;
+  #profile {
+    grid-template-rows: [picture] 40% [description] 60%;
   }
 }
 

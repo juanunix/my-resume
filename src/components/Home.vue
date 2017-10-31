@@ -50,7 +50,7 @@ main {
 @include media-breakpoint-mobile {
   
   .wrapper {
-    grid-template-rows: 1% [profile] 450px [main] auto 1%;
+    grid-template-rows: 1% [profile] 700px [main] auto 1%;
     grid-template-columns: 1% [main] 1fr 1%;
   }
 
